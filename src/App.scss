@@ -1,0 +1,25 @@
+.app {
+  height: 100vh;
+
+  .sections {
+    width: 100%;
+    height: calc(100vh - 70px);
+    position: relative;
+    top: 70px;
+    scroll-snap-type: y mandatory;
+    
+    //скрываем скролл
+    scrollbar-width: none; //для firefox
+    &::-webkit-scrollbar{
+      display: none;
+    }
+
+    > *{//для каждого внутри элемента
+      width: 100vw;
+      height: calc(100vh - 70px);
+      //пока не доскролили до следующей секции, скролл возвращается
+      // начало секции
+      scroll-snap-align: start;
+    }
+  }
+}
