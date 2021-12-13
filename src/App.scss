@@ -7,7 +7,8 @@
     position: relative;
     top: 70px;
     scroll-snap-type: y mandatory;
-    
+    //при переходе якорей была плавность
+    scroll-behavior: smooth;
     //скрываем скролл
     scrollbar-width: none; //для firefox
     &::-webkit-scrollbar{
