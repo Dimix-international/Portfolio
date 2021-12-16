@@ -1937,6 +1937,11 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
+"@types/ityped@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@types/ityped/-/ityped-1.0.1.tgz#0599e2ed8f46c631abe31decd6d70e865afa003a"
+  integrity sha512-7K9uPwFcvYeqvA7IBCSC4YE1nkkubyyx2IhFnZp4P62OCX2zg07qMn04QVdbhGwfiIzJx+UFFLsjunRdim1/Tw==
+
 "@types/jest@*":
   version "27.0.3"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-27.0.3.tgz#0cf9dfe9009e467f70a342f0f94ead19842a783a"
@@ -6659,6 +6664,11 @@ istanbul-reports@^3.0.2:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
 
+ityped@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/ityped/-/ityped-1.0.3.tgz#78430ab45e4836f4e565ecbacd221e58d46b44b3"
+  integrity sha512-46Qnh3qs+6EJlWDHmvWRW6qiz5jFy2mkh9UvtTvQmLJMZIjKrdz4du68le7hLX4tAWCp6QTKiq/OuLv6huHxZg==
+
 jest-changed-files@^26.6.2:
   version "26.6.2"
   resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-26.6.2.tgz#f6198479e1cc66f22f9ae1e22acaa0b429c042d0"
@@ -9642,6 +9652,11 @@ react-is@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
+
+react-ityped@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-ityped/-/react-ityped-1.0.2.tgz#d10266ec281457e1c906327591861bc0d8aa1d1f"
+  integrity sha512-whkcGD8sHXZbNdBhGYHAiFyDgMQYQiG3tQJ2ENUPE7YlVjLEuZUEmdC3T6FEnNCjnJpK4c6bRYYGKBqd53VQ6g==
 
 react-refresh@^0.8.3:
   version "0.8.3"
