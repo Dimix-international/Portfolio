@@ -2,10 +2,19 @@
 
 .item{
   font-size: 1.2rem;
-  margin-right: 50px;
+  margin-right: 40px;
   padding: 10px;
   cursor: pointer;
   border-radius: 8px;
+
+  @include mobileSmall {
+    font-size: 18px;
+    margin: 0 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   &.active{
     background-color: $mainColor;

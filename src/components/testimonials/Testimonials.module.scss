@@ -1,3 +1,130 @@
+@import '../../global.scss';
 .testimonials {
-  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  h1{
+    font-size: 3.1rem;
+
+    @include mobile {
+      font-size: 2.5rem;
+    }
+    @include mobileSmall {
+      flex: 0 0 38px;
+      font-size: 2rem;
+    }
+  }
+}
+.container {
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 45px;
+
+  @include mobile {
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 20px;
+    padding: 20px 0;
+  }
+}
+.card {
+  flex: 0 0 250px;
+  min-height: 60%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px -8px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  transition: all 1s;
+
+  &:hover{
+    transform: scale(1.15);
+  }
+
+  @include mobile {
+    flex: 0 1 30% ;
+    min-height: 0;
+    width: 80%;
+  }
+
+  @include mobileSmall {
+    padding: 10px;
+  }
+}
+.card.featured {
+  width: 300px;
+  height: 65%;
+
+  @include mobile {
+    height: 0;
+    flex: 0 1 30% ;
+    width: 80%;
+  }
+}
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mobileSmall {
+    flex: 0 0 50px
+  }
+}
+.left, .right{
+  height: 25px;
+}
+.user {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 30px;
+
+  @include mobileSmall {
+    height: 40px;
+    width: 40px;
+    margin: 0 20px;
+  }
+}
+.center {
+  padding: 10px;
+  background-color: #efe7ea;
+  border-radius: 10px;
+  font-size: 1.3rem;
+
+  @include mobileSmall {
+    flex: 1 1 auto;
+    font-size: 1rem;
+    padding: 7px;
+  }
+}
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  h3{
+    margin-bottom: 5px;
+  }
+  h4{
+    color: gray;
+  }
+
+  @include mobileSmall {
+    flex: 0 0 35px;
+    padding: 3px;
+    h3{
+      font-size: 1rem;
+    }
+    h4{
+      font-size: 1rem;
+    }
+  }
 }
