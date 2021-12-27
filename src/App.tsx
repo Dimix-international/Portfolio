@@ -7,6 +7,7 @@ import {Works} from "./components/works/Works";
 import {Testimonials} from "./components/testimonials/Testimonials";
 import {Contact} from "./components/contact/Contact";
 import {Menu} from "./components/menu/Menu";
+import {MySkills} from "./components/MySkills/MySkills";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
             />
             <section className={'sections'}>
                 <Intro/>
+                <MySkills />
                 <Portfolio/>
                 <Works/>
                 <Testimonials/>

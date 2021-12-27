@@ -1,0 +1,127 @@
+.wrapper {
+  display: grid;
+}
+.scills-bar {
+  width: 80%;
+  background-color: #fff;
+  padding: 25px 30px;
+}
+.bar {
+  margin: 20px 0;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+.info {
+  margin-bottom: 5px;
+  span {
+    font-size: 18px;
+    font-weight: 500;
+
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+  }
+}
+.progress-line {
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 1px rgba(255, 255, 255, 0.8);
+  position: relative;
+  overflow-x: visible !important;
+
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.progress-line span {
+  position: absolute;
+  height: 100%;
+  background: #6665ee;
+  border-radius: 10px;
+  overflow-x: visible !important;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+  }
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: -22px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    background: #000;
+    padding: 1px 8px;
+    border-radius: 3px;
+
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+  }
+}
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+
+.progress-line.htmlCss span {
+  width: 90%;
+}
+.progress-line.react span {
+  width: 90%;
+}
+.progress-line.redux span {
+  width: 80%;
+}
+.progress-line.js span {
+  width: 75%;
+}
+.progress-line.ts span {
+  width: 80%;
+}
+
+.progress-line.htmlCss span::after {
+  content: "90%";
+}
+.progress-line.react span::after {
+  content: "90%";
+}
+.progress-line.redux span::after {
+  content: "80%";
+}
+.progress-line.js span::after {
+  content: "75%";
+}
+.progress-line.ts span::after {
+  content: "80%";
+}
