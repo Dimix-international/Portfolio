@@ -8,10 +8,11 @@ export const useOnScreen = (ref: React.MutableRefObject<HTMLElement | null>, roo
             ([entry]) => {
                 // Обновите наше состояние при срабатывании обратного вызова наблюдателя
                 setIntersecting(entry.isIntersecting);
+                console.log(entry.target.id)
             },
             {
                 rootMargin,
-                threshold: 0.1,
+                threshold: 0.7,
             }
         );
         if (ref.current) {

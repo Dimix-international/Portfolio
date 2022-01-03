@@ -9,7 +9,7 @@ type SideCubeType = {
 }
 export const SideCube: React.FC<SideCubeType> = (props) => {
     const {side, img, sign,} = props;
-    console.log(img)
+
     return (
         <div
             className={`${s.body} ${s[side]}`}>

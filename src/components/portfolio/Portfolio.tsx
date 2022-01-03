@@ -1,6 +1,6 @@
 import s from './Portfolio.module.scss'
 import {PortfolioItem} from "./portfolioItem/PortfolioItem";
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useRef, useState} from "react";
 import {
     featuredPortfolio,
     webPortfolio,
@@ -8,6 +8,8 @@ import {
     designPortfolio,
     contentPortfolio, DataPortfolioType,
 } from '../../data'
+import {useOnScreen} from "../../hooks/onScreen";
+import {ThemeContext} from "../../context";
 
 export type ItemListType = {
     id:selectedItemType,
@@ -42,6 +44,18 @@ export const Portfolio = () => {
         },
     ];
 
+    const containerRef = useRef<HTMLDivElement | null>(null);
+
+    const isVisible = useOnScreen(containerRef);
+    const{setActivePointOfMenu} = useContext(ThemeContext);
+
+
+    useEffect(() => {
+        if(isVisible) {
+            setActivePointOfMenu('Portfolio')
+        }
+    },[isVisible, setActivePointOfMenu])
+
     useEffect(() => {
 
         switch (selectedItem) {
@@ -61,7 +75,7 @@ export const Portfolio = () => {
     },[selectedItem])
 
     return (
-        <div className={s.portfolio} id={'portfolio'}>
+        <div ref={containerRef} className={s.portfolio} id={'portfolio'}>
             <h1>Portfolio</h1>
             <ul>
                 {

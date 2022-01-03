@@ -1,6 +1,6 @@
 .body {
-    width: 350px;
-    height: 350px;
+    width: 380px;
+    height: 380px;
     position: absolute;
     overflow-x: visible !important;
 }
@@ -11,16 +11,16 @@ img {
     transform: translateZ(0);
 }
 .front {
-    transform: translateZ(175px);
+    transform: translateZ(190px);
 }
 .right {
-    transform: rotateY(-270deg) translateX(175px);
+    transform: rotateY(-270deg) translateX(190px);
     transform-origin: 100% 0;
 }
 .back {
-    transform: translateZ(-175px) rotateY(180deg);
+    transform: translateZ(-190px) rotateY(180deg);
 }
 .left {
-    transform: rotateY(270deg) translateX(-175px);
+    transform: rotateY(270deg) translateX(-190px);
     transform-origin: 0 50%;
 }
